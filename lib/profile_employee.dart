@@ -1,14 +1,11 @@
 import 'package:delivery_app/Customer/inbbox.dart';
 import 'package:delivery_app/Customer/product_detail_2.dart';
-import 'package:delivery_app/Delivery/Bottom%20Navigation%20Bar/Bottom%20Bar%20Screens/Home%20screens/Tab%20bar%20screens/screens/detail.dart';
 
 import 'package:delivery_app/utils/constant.dart';
 import 'package:flutter/material.dart';
 
-import '../edit_profile.dart';
-
-class Profile extends StatelessWidget {
-  const Profile({Key? key}) : super(key: key);
+class Profile_Employee extends StatelessWidget {
+  const Profile_Employee({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -26,22 +23,11 @@ class Profile extends StatelessWidget {
               color: Color(0xff323232),
             )),
         title: Text(
-          'Profile',
+          'Profile_Employee',
           style: TextStyle(
               fontSize: 22, color: Colors.black, fontWeight: FontWeight.w500),
         ),
         centerTitle: true,
-        actions: [
-          IconButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (builder) => Edit_Employee()));
-              },
-              icon: Icon(
-                Icons.edit,
-                color: Colors.grey,
-              ))
-        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
@@ -109,18 +95,12 @@ class Profile extends StatelessWidget {
                     'Recent Orders',
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.w500),
                   ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (builder) => ChatPage()));
-                    },
-                    child: Text(
-                      'See All',
-                      style: TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w500,
-                          color: button),
-                    ),
+                  Text(
+                    'See All',
+                    style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: button),
                   )
                 ],
               ),
@@ -129,8 +109,10 @@ class Profile extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (builder) => Detail()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (builder) => Product_detail_2()));
                 },
                 child: Container(
                   height: 120,
@@ -208,8 +190,10 @@ class Profile extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (builder) => Detail()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (builder) => Product_detail_2()));
                 },
                 child: Container(
                   height: 120,
@@ -291,8 +275,10 @@ class Profile extends StatelessWidget {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.push(context,
-                      MaterialPageRoute(builder: (builder) => Detail()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (builder) => Product_detail_2()));
                 },
                 child: Container(
                   height: 120,

@@ -21,10 +21,12 @@ class Save extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Icon(
-                      Icons.edit_note,
-                      color: white,
-                    ),
+                    IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: Icon(Icons.arrow_back)),
+                    // SizedBox(width: 60),
                     Text(
                       'Employe',
                       style:

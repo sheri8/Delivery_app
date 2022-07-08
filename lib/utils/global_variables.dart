@@ -8,9 +8,9 @@ const webScreenSize = 600;
 
 List<Widget> homeScreenItems = [
   Home(),
-  Booking(),
+  Booking123(),
   Notification_screen(),
-  Account()
+  Account123()
 
   // Home_Screen(),
   // Fiber_dev(),

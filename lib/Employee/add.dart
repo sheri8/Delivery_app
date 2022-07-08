@@ -12,44 +12,57 @@ class Add extends StatelessWidget {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(30),
-          child: Column(crossAxisAlignment: CrossAxisAlignment.start,
-              // mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(height: 20),
-                Center(
-                  child: Text(
-                    'Employe',
-                    style: TextStyle(fontSize: 35, fontWeight: FontWeight.w700),
-                  ),
-                ),
-                SizedBox(height: 90),
-                textfield2('Employ Name'),
-                SizedBox(height: 25),
-                textfield2('Phone Name'),
-                SizedBox(height: 25),
-                textfield2('Email Address'),
-                SizedBox(height: 25),
-                textfield2('Password'),
-                SizedBox(height: 60),
-                Container(
-                  //  margin: EdgeInsets.only(bottom: 20),
-                  child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (builder) => Save()));
-                      },
-                      child: Text(
-                        'ADD',
-                        style: TextStyle(fontSize: 16),
+          child: ListView(children: [
+            Column(crossAxisAlignment: CrossAxisAlignment.start,
+                // mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      IconButton(
+                          onPressed: () {
+                            Navigator.pop(context);
+                          },
+                          icon: Icon(Icons.arrow_back)),
+                      SizedBox(width: 60),
+                      Center(
+                        child: Text(
+                          'Employe',
+                          style: TextStyle(
+                              fontSize: 35, fontWeight: FontWeight.w700),
+                        ),
                       ),
-                      style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius:
-                                  BorderRadius.all(Radius.circular(12))),
-                          primary: button,
-                          fixedSize: Size(380, 55))),
-                ),
-              ]),
+                    ],
+                  ),
+                  SizedBox(height: 90),
+                  textfield2('Employ Name'),
+                  SizedBox(height: 25),
+                  textfield2('Phone Name'),
+                  SizedBox(height: 25),
+                  textfield2('Email Address'),
+                  SizedBox(height: 25),
+                  textfield2('Password'),
+                  SizedBox(height: 60),
+                  Container(
+                    //  margin: EdgeInsets.only(bottom: 20),
+                    child: ElevatedButton(
+                        onPressed: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (builder) => Save()));
+                        },
+                        child: Text(
+                          'ADD',
+                          style: TextStyle(fontSize: 16),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(12))),
+                            primary: button,
+                            fixedSize: Size(380, 55))),
+                  ),
+                ]),
+          ]),
         ),
       ),
     );

@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Account extends StatelessWidget {
-  const Account({Key? key}) : super(key: key);
+import 'Account/profile.dart';
+
+class Account123 extends StatelessWidget {
+  const Account123({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: Profile123(),
+    );
   }
 }

@@ -1,6 +1,7 @@
 import 'package:delivery_app/Customer/users.dart';
-import 'package:delivery_app/Delivery/sign_otp.dart';
+import 'package:delivery_app/Useless%20Screens/sign_otp.dart';
 import 'package:delivery_app/Employee/add.dart';
+import 'package:delivery_app/Firebase/index.dart';
 import 'package:delivery_app/services/database_methoda.dart';
 import 'package:delivery_app/utils/constant.dart';
 import 'package:flutter/material.dart';
@@ -66,9 +67,12 @@ class Select_Interface extends StatelessWidget {
               child: Container(
                 margin: EdgeInsets.only(bottom: 20),
                 child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (builder) => Users()));
+                    onPressed: () async {
+                      String res = await await FireBase()
+                          .UploadData('Sheraz', "0315-6632257");
+                      print(res.toString());
+                      // Navigator.push(context,
+                      //     MaterialPageRoute(builder: (builder) => Users()));
                     },
                     child: Text(
                       'Customer',

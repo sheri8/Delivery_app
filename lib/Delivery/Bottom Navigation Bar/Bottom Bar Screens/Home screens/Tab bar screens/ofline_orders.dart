@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'screens/detail.dart';
 import 'screens/product_detail.dart';
 
 class Offline_orders extends StatelessWidget {
@@ -15,10 +16,8 @@ class Offline_orders extends StatelessWidget {
           children: [
             InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (builder) => Product_detail()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (builder) => Detail()));
                 },
                 // onTap: () {
 

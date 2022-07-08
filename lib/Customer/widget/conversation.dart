@@ -41,29 +41,13 @@ class Conversation extends StatelessWidget {
                       constraints: BoxConstraints(
                           maxWidth: MediaQuery.of(context).size.width * 0.6),
                       decoration: BoxDecoration(
-                          color: isMe ? Color(0xffEE1D1D) : Color(0xffF9F9F9),
-                          // borderRadius: BorderRadius.all(
-                          //   topLeft: Radius.circular(16),
-                          //   topRight: Radius.circular(16),
-                          //   bottomLeft: Radius.circular(isMe ? 0 : 0),
-                          //   bottomRight: Radius.circular(isMe ? 0 : 0),
-                          // )
+                          color: isMe ? Colors.pink[100] : Color(0xffF9F9F9),
                           borderRadius: BorderRadius.circular(12)),
                       child: Text(
                         messages[index].text,
                         style: TextStyle(
                             color: isMe ? Color(0xff707070) : Color(0xff585F66),
                             letterSpacing: .5),
-                        //                       GoogleFonts.getFont("Poppins",
-                        //                       fontSize: 13,
-                        //                       fontWeight: FontWeight.w400,
-                        //   textStyle:
-                        // ),
-
-                        //  MyTheme.bodyTextMessage.copyWith(
-                        //   fontWeight: FontWeight.w400,
-                        //   fontSize: 15,
-                        //     color: isMe ? Color(0xff707070) : Color(0xff585F66)),
                       ),
                     ),
                   ],

@@ -1,3 +1,4 @@
+import 'package:delivery_app/Delivery/Bottom%20Navigation%20Bar/Bottom%20Bar%20Screens/Home%20screens/Tab%20bar%20screens/screens/detail.dart';
 import 'package:delivery_app/Delivery/Bottom%20Navigation%20Bar/Bottom%20Bar%20Screens/Home%20screens/Tab%20bar%20screens/screens/product_detail.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -15,10 +16,8 @@ class Open_orders extends StatelessWidget {
           children: [
             InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (builder) => Product_detail()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (builder) => Detail()));
                 },
                 // onTap: () {
 

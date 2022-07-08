@@ -16,11 +16,22 @@ class Users extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(height: 55),
-              Center(
-                child: Text(
-                  'User',
-                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.w700),
-                ),
+              Row(
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(Icons.arrow_back)),
+                  SizedBox(width: 60),
+                  Center(
+                    child: Text(
+                      'User',
+                      style:
+                          TextStyle(fontSize: 35, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: 100),
               Card(
@@ -78,14 +89,14 @@ class Users extends StatelessWidget {
                               style: TextStyle(
                                   fontSize: 20,
                                   color: Color(0xffCF2D24),
-                                  fontWeight: FontWeight.w600),
+                                  fontWeight: FontWeight.w500),
                             ),
                             Text(
                               '245',
                               style: TextStyle(
                                   fontSize: 20,
                                   color: Color(0xffCF2D24),
-                                  fontWeight: FontWeight.w600),
+                                  fontWeight: FontWeight.w500),
                             ),
                           ],
                         ),
@@ -146,8 +157,8 @@ class Users extends StatelessWidget {
                         hintText: 'Guest',
                         hintStyle: TextStyle(
                             color: Colors.black,
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600),
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500),
                         border: InputBorder.none),
                   ),
                 ),
@@ -179,8 +190,8 @@ class Users extends StatelessWidget {
                         hintText: 'Last 12 hrs',
                         hintStyle: TextStyle(
                             color: Colors.black,
-                            fontSize: 26,
-                            fontWeight: FontWeight.w600),
+                            fontSize: 24,
+                            fontWeight: FontWeight.w500),
                         border: InputBorder.none),
                   ),
                 ),

@@ -16,11 +16,22 @@ class User2 extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 55),
-              Center(
-                child: Text(
-                  'User',
-                  style: TextStyle(fontSize: 35, fontWeight: FontWeight.w700),
-                ),
+              Row(
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(Icons.arrow_back)),
+                  SizedBox(width: 60),
+                  Center(
+                    child: Text(
+                      'User',
+                      style:
+                          TextStyle(fontSize: 35, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: 20),
               SizedBox(

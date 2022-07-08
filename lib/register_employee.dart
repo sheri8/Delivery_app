@@ -5,8 +5,8 @@ import 'package:delivery_app/select_dashboard.dart';
 import 'package:delivery_app/utils/constant.dart';
 import 'package:flutter/material.dart';
 
-class Register extends StatelessWidget {
-  const Register({Key? key}) : super(key: key);
+class Register_Employee extends StatelessWidget {
+  const Register_Employee({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,6 +39,29 @@ class Register extends StatelessWidget {
                   ),
                 ],
               ),
+              Container(
+                margin: EdgeInsets.only(top: 10, left: 10, right: 10),
+                child: SizedBox(
+                  height: 50,
+                  child: TextField(
+                    cursorHeight: 25,
+                    decoration: InputDecoration(
+                        suffixIcon: Icon(Icons.search),
+                        fillColor: Color.fromARGB(255, 207, 203, 203),
+                        filled: true,
+                        disabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            borderSide: BorderSide(color: Colors.white54)),
+                        enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(20)),
+                            borderSide: BorderSide(color: Colors.white54)),
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(20)),
+                        ),
+                        hintText: 'Search Here...'),
+                  ),
+                ),
+              ),
               SizedBox(height: 20),
               Text(
                 'The Delivery Vendor (DV) can register for 14-day trial on Registration',
@@ -48,15 +71,13 @@ class Register extends StatelessWidget {
                     fontSize: 12),
               ),
               SizedBox(height: 40),
-              textfield('Name'),
-              SizedBox(height: 25),
-              textfield('Business Name'),
+              textfield('Employee Name'),
               SizedBox(height: 25),
               textfield('Phone Number'),
               SizedBox(height: 25),
-              textfield('Whatsapp Number'),
+              textfield('Address'),
               SizedBox(height: 25),
-              textfield('Email Address'),
+              textfield('Email '),
               SizedBox(height: 25),
               textfield('Password'),
               SizedBox(height: 50),
@@ -70,13 +91,13 @@ class Register extends StatelessWidget {
                         borderRadius: BorderRadius.circular(10)),
                   ),
                   onPressed: () {
-                    debugPrint('Delivery');
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (builder) => Select_Dashboard(),
-                          //  MobileScreenLayout()
-                        ));
+                    // debugPrint('Delivery');
+                    // Navigator.push(
+                    //     context,
+                    //     MaterialPageRoute(
+                    //       builder: (builder) => Select_Dashboard(),
+                    //       //  MobileScreenLayout()
+                    //     ));
                   },
                   child: const Text(
                     'REGISTER',

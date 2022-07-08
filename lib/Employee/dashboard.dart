@@ -1,3 +1,4 @@
+import 'package:delivery_app/Customer/product_detail_2.dart';
 import 'package:delivery_app/Employee/builder.dart';
 import 'package:delivery_app/utils/constant.dart';
 import 'package:flutter/material.dart';
@@ -14,11 +15,27 @@ class Dashboard extends StatelessWidget {
             child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            SizedBox(height: 50),
-            Center(
-              child: Text(
-                'Dashboard',
-                style: TextStyle(fontSize: 35, fontWeight: FontWeight.w700),
+            SizedBox(
+              height: 50,
+            ),
+            Container(
+              margin: EdgeInsets.only(left: 30),
+              child: Row(
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(Icons.arrow_back)),
+                  SizedBox(width: 60),
+                  Center(
+                    child: Text(
+                      'Dashboard',
+                      style:
+                          TextStyle(fontSize: 35, fontWeight: FontWeight.w700),
+                    ),
+                  ),
+                ],
               ),
             ),
             SizedBox(height: 40),
@@ -36,7 +53,14 @@ class Dashboard extends StatelessWidget {
                   itemBuilder: ((context, index) {
                     return Padding(
                       padding: const EdgeInsets.symmetric(vertical: 5),
-                      child: Builder2(),
+                      child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (builder) => Product_detail_2()));
+                          },
+                          child: Builder2()),
                     );
                   })),
             )

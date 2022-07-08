@@ -1,6 +1,8 @@
 import 'package:delivery_app/Delivery/Bottom%20Navigation%20Bar/Bottom%20Bar%20Screens/Home%20screens/Tab%20bar%20screens/screens/product_detail.dart';
 import 'package:flutter/material.dart';
 
+import 'screens/detail.dart';
+
 class Pick_orders extends StatelessWidget {
   const Pick_orders({Key? key}) : super(key: key);
 
@@ -14,10 +16,8 @@ class Pick_orders extends StatelessWidget {
           children: [
             InkWell(
                 onTap: () {
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (builder) => Product_detail()));
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (builder) => Detail()));
                 },
                 // onTap: () {
 
